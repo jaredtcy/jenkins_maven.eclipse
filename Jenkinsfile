@@ -4,6 +4,11 @@ pipeline{
 		maven 'maven 3.9.9'
 		jdk 'Java JDK 17'
 	}
+	
+	   environment {
+        PATH = "/bin:/usr/bin:/usr/local/bin:/opt/homebrew/bin:$PATH"
+    }
+    
 	stages{
 		stage('clean'){
 			steps {
