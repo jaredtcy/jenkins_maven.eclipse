@@ -41,9 +41,11 @@ pipeline{
 			
 			
 		}
-		
+		stage('Code Quality Check (SonarQube)') {
+            steps {
+                sh 'mvn sonar:sonar'
 	}
-	
+	}
 	
 	
 }
